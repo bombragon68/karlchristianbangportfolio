@@ -854,6 +854,9 @@
     color: #1560bd;
     text-decoration: underline;
   }
+  .cert-preview-mobile-img {
+    display: none;
+  }
 
   @media (max-width: 700px) {
     .certs-grid {
@@ -865,6 +868,16 @@
     }
     .cert-card {
       padding: 18px 20px;
+    }
+	.cert-preview embed {
+      display: none;
+    }
+    .cert-preview-mobile-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #f4f6f8;
     }
   }
 
@@ -1049,7 +1062,7 @@
         <div class="home-buttons">
           <!-- target="_blank" opens the CV in a new tab instead of navigating away from the page -->
           <a href="CV Resume with Certificates - Karl Christian Ang  - July 2026.pdf" class="btn btn-cv" target="_blank" rel="noopener noreferrer">Download CV</a>
-          <a href="#contact" class="btn btn-contact">Contact Me</a>
+          <a href="#contact" class="btn btn-contact" id="contactBtn">Contact Me</a>
         </div>
       </div>
 
@@ -1311,13 +1324,13 @@
 
   <section id="certifications">
     <div class="box">
-      <h2>Certifications</h2>
-      <!-- Replace href="#" on each .cert-provider link with the real verification / issuer link, and swap PDF filenames once you upload them -->
-<div class="certs-grid">
+	<h2>Certifications</h2>
+      <div class="certs-grid">
 
         <div class="cert-card">
           <a href="Certifications/Java Fundamentals Certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
             <embed src="Certifications/Java Fundamentals Certificate.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/Java Fundamentals Certificate.jpg" alt="Java Fundamentals Certificate" class="cert-preview-mobile-img">
           </a>
           <div class="cert-name">Java Fundamentals Certificate</div>
           <a href="https://academy.oracle.com/en/oa-web-overview.html" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: Oracle Academy</a>
@@ -1326,6 +1339,7 @@
         <div class="cert-card">
           <a href="Certifications/Certificate of Course Completion Cisco - Introduction to Cybersecurity.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
             <embed src="Certifications/Certificate of Course Completion Cisco - Introduction to Cybersecurity.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/Certificate of Course Completion Cisco - Introduction to Cybersecurity.jpg" alt="Certificate of Course Completion – Introduction to Cybersecurity" class="cert-preview-mobile-img">
           </a>
           <div class="cert-name">Certificate of Course Completion – Introduction to Cybersecurity</div>
           <a href="https://www.netacad.com/" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: Cisco Networking Academy</a>
@@ -1335,6 +1349,7 @@
         <div class="cert-card">
           <a href="Certifications/Certificate - SAP Business One.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
             <embed src="Certifications/Certificate - SAP Business One.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/Certificate - SAP Business One.png" alt="Certificate – SAP Business One" class="cert-preview-mobile-img">
           </a>
           <div class="cert-name">Certificate – SAP Business One</div>
           <a href="https://learning.sap.com/" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: SAP Learning</a>
@@ -1344,6 +1359,7 @@
         <div class="cert-card">
           <a href="Certifications/Certificate of Achievement - Odoo Functional Certification.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
             <embed src="Certifications/Certificate of Achievement - Odoo Functional Certification.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/Certificate of Achievement - Odoo Functional Certification.png" alt="Certificate of Achievement – Odoo Functional Certification" class="cert-preview-mobile-img">
           </a>
           <div class="cert-name">Certificate of Achievement – Odoo Functional Certification</div>
           <a href="https://www.odoo.com/es/slides" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: Odoo Learn</a>
@@ -1352,22 +1368,25 @@
         <div class="cert-card">
           <a href="Certifications/CERTIFICATE OF COMPLETION - ITSM.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
             <embed src="Certifications/CERTIFICATE OF COMPLETION - ITSM.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/CERTIFICATE OF COMPLETION - ITSM.jpg" alt="Certificate of Completion – ITSM" class="cert-preview-mobile-img">
           </a>
           <div class="cert-name">Certificate of Completion – ITSM</div>
           <a href="https://www.linkedin.com/in/jonell-verano-330409179/" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: Jonell Verano – STI Global City Instructor</a>
         </div>
 
         <div class="cert-card">
-          <a href="Certifications/TOP 8 ITSM CERTIFICATE.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
-            <embed src="Certifications/TOP 8 ITSM CERTIFICATE.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+          <a href="Certifications/Certificate of Recognition - Rank 8 in Information Technology Service Management (ITSM).pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
+            <embed src="Certifications/Certificate of Recognition - Rank 8 in Information Technology Service Management (ITSM).pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/Certificate of Recognition - Rank 8 in Information Technology Service Management (ITSM).jpg" alt="Certificate of Recognition - Rank 8 in Information Technology Service Management (ITSM)" class="cert-preview-mobile-img">
           </a>
-          <div class="cert-name">Top 8 ITSM Certificate</div>
+          <div class="cert-name">Certificate of Recognition - Rank 8 in Information Technology Service Management (ITSM)</div>
           <a href="https://www.linkedin.com/in/jonell-verano-330409179/" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: Jonell Verano – STI Global City Instructor</a>
         </div>
 
         <div class="cert-card">
           <a href="Certifications/CERTIFICATE OF COMPLETION - PYTHON PROGRAMMING WORKSHOP FOR BEGGINERS (MSTCONNECTPH).pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
             <embed src="Certifications/CERTIFICATE OF COMPLETION - PYTHON PROGRAMMING WORKSHOP FOR BEGGINERS (MSTCONNECTPH).pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/CERTIFICATE OF COMPLETION - PYTHON PROGRAMMING WORKSHOP FOR BEGGINERS (MSTCONNECTPH).jpg" alt="Certificate of Completion – Python Programming Workshop for Beginners" class="cert-preview-mobile-img">
           </a>
           <div class="cert-name">Certificate of Completion – Python Programming Workshop for Beginners</div>
           <a href="https://www.facebook.com/mstconnectph" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: MSTCONNECT PH</a>
@@ -1376,6 +1395,7 @@
         <div class="cert-card">
           <a href="Certifications/Certificate of Completion MSTCONNECT PH MySQL Database Workshop.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
             <embed src="Certifications/Certificate of Completion MSTCONNECT PH MySQL Database Workshop.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/Certificate of Completion MSTCONNECT PH MySQL Database Workshop.png" alt="Certificate of Completion – MySQL Database Workshop" class="cert-preview-mobile-img">
           </a>
           <div class="cert-name">Certificate of Completion – MySQL Database Workshop</div>
           <a href="https://www.facebook.com/mstconnectph" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: MSTCONNECT PH</a>
@@ -1384,6 +1404,7 @@
         <div class="cert-card">
           <a href="Certifications/Certificate of Completion - SSS Internship Program.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
             <embed src="Certifications/Certificate of Completion - SSS Internship Program.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/Certificate of Completion - SSS Internship Program.jpg" alt="Certificate of Completion – SSS Internship Program" class="cert-preview-mobile-img">
           </a>
           <div class="cert-name">Certificate of Completion – SSS Internship Program</div>
           <a href="https://www.facebook.com/MYSSSPH" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: Philippine Social Security System</a>
@@ -1392,7 +1413,6 @@
       </div>
     </div>
   </section>
-
   <section id="contact">
     <div class="box">
       
@@ -1419,8 +1439,14 @@
         </div>
 
         <!-- Layout only for now — no submission handler wired up yet -->
-        <form class="contact-form" onsubmit="return false;">
+        <form class="contact-form" id="contactForm">
 		<h2>Contact Me</h2>
+
+        <!-- Paste your Web3Forms access key below -->
+        <input type="hidden" name="access_key" value="f61ab4a3-7ab9-44d4-9268-04fd75bc2143">
+        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+        <input type="hidden" name="subject" id="cf-computed-subject">
+
         <label for="cf-name">Name</label>
         <input type="text" id="cf-name" name="name" placeholder="Your name" required>
 
@@ -1428,13 +1454,14 @@
         <input type="email" id="cf-email" name="email" placeholder="your.email@example.com" required>
 
         <label for="cf-subject">Subject</label>
-        <input type="text" id="cf-subject" name="subject" placeholder="What's this about?">
+        <input type="text" id="cf-subject-input" placeholder="What's this about?">
 
         <label for="cf-message">Message</label>
         <textarea id="cf-message" name="message" placeholder="Write your message here..." required></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
+        <button type="submit" id="cf-submit-btn">Send Message</button>
+        <p id="cf-status" style="font-size: 14px; margin-top: -6px;"></p>
+		</form>
     </div>
   </section>
 
@@ -1481,9 +1508,11 @@
         navToggle.classList.remove('active');
       });
     });
-    // Close the mobile menu after tapping a link
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => navbar.classList.remove('open'));
+// Same "no hash in the URL" behavior for the standalone Contact Me button on Home
+    const contactBtn = document.getElementById('contactBtn');
+    contactBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     });
     // ---- Home section: auto-swapping role text ----
     const roles = ["Software Engineer", "Full Stack Web Developer", "Programmer", "Application Developer", "IT Personnel", "Technical Support"];
@@ -1531,6 +1560,65 @@
           imgs[current].classList.add('active');
         }, 4500);
       });
+    });
+	// ---- Contact form: sends via Web3Forms, keeping your Gmail credentials off the page ----
+    const contactForm = document.getElementById('contactForm');
+    const cfStatus = document.getElementById('cf-status');
+    const cfSubmitBtn = document.getElementById('cf-submit-btn');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Build the exact email format requested:
+      // Subject on Email: (subject)
+      // Details:
+      // Name: (name)
+      // Email: (email)
+      // Message: (message)
+      const name = document.getElementById('cf-name').value;
+      const email = document.getElementById('cf-email').value;
+      const subjectInput = document.getElementById('cf-subject-input').value || 'New message from your portfolio';
+      const message = document.getElementById('cf-message').value;
+
+      document.getElementById('cf-computed-subject').value = subjectInput;
+
+      const formattedMessage =
+        `Subject on Email: ${subjectInput}\n\n` +
+        `Details:\n` +
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Message: ${message}`;
+
+      const formData = new FormData(contactForm);
+      formData.set('message', formattedMessage);
+
+      cfSubmitBtn.disabled = true;
+      cfSubmitBtn.textContent = 'Sending...';
+      cfStatus.textContent = '';
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          cfStatus.style.color = '#2ecc71';
+          cfStatus.textContent = 'Message sent — thank you! I\'ll get back to you soon.';
+          contactForm.reset();
+        } else {
+          cfStatus.style.color = '#ff6b6b';
+          cfStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+        }
+      } catch (error) {
+        cfStatus.style.color = '#ff6b6b';
+        cfStatus.textContent = 'Network error. Please try again or email me directly.';
+      } finally {
+        cfSubmitBtn.disabled = false;
+        cfSubmitBtn.textContent = 'Send Message';
+      }
     });
   </script>
 
