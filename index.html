@@ -1581,12 +1581,7 @@
 
       document.getElementById('cf-computed-subject').value = subjectInput;
 
-      const formattedMessage =
-        `Subject on Email: ${subjectInput}\n\n` +
-        `Details:\n` +
-        `Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Message: ${message}`;
+      const formattedMessage = \n` +  ${message}`;
 
       const formData = new FormData(contactForm);
       formData.set('message', formattedMessage);
