@@ -177,6 +177,7 @@
     align-items: center;
     justify-content: center;
     padding: 90px 20px 60px;
+ 
   }
 
   section h2 {
@@ -1581,7 +1582,7 @@
 
       document.getElementById('cf-computed-subject').value = subjectInput;
 
-      const formattedMessage = \n` +  ${message}`;
+      const formattedMessage = `${message}`;
 
       const formData = new FormData(contactForm);
       formData.set('message', formattedMessage);
