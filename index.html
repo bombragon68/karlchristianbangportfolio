@@ -784,9 +784,14 @@
     flex-direction: column;
   }
 
+  /* a little extra width so three cards per row don't feel cramped */
+  #certifications .box {
+    max-width: 1500px;
+  }
+
   .certs-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     width: 100%;
   }
@@ -853,6 +858,37 @@
   .cert-credential:hover {
     color: #1560bd;
     text-decoration: underline;
+  }
+    /* "Provided by" line with more than one separate link */
+  .cert-provider-group {
+    font-size: 16px;
+    color: #1560bd;
+  }
+
+  .cert-provider-group a {
+    color: #1560bd;
+    text-decoration: none;
+  }
+
+  .cert-provider-group a:hover {
+    text-decoration: underline;
+  }
+
+  /* placeholder for a certificate that has no PDF/image yet */
+  .cert-preview-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    color: #6a7583;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .cert-preview-placeholder span:first-child {
+    font-size: 46px;
   }
   .cert-preview-mobile-img {
     display: none;
@@ -1050,9 +1086,14 @@
           <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
           <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
           <div class="tech-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+          <div class="tech-item"><i class="devicon-nodejs-plain colored"></i><span>Node</span></div>
+          <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+          <div class="tech-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
           <div class="tech-item"><img src="https://cdn.simpleicons.org/odoo/714B67" alt="Odoo"><span>Odoo</span></div>
           <div class="tech-item"><i class="devicon-xml-plain colored"></i><span>XML</span></div>
           <div class="tech-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+          <div class="tech-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+		  <div class="tech-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
         </div>
 
         <p class="status">
@@ -1061,7 +1102,7 @@
 
         <div class="home-buttons">
           <!-- target="_blank" opens the CV in a new tab instead of navigating away from the page -->
-          <a href="CV Resume with Certificates - Karl Christian Ang  - July 2026.pdf" class="btn btn-cv" target="_blank" rel="noopener noreferrer">Download CV</a>
+          <a href="CV Resume with Certificates - Karl Christian B. Ang (November 2026).pdf" class="btn btn-cv" target="_blank" rel="noopener noreferrer">Download CV</a>
           <a href="#contact" class="btn btn-contact" id="contactBtn">Contact Me</a>
         </div>
       </div>
@@ -1324,10 +1365,46 @@
 
   <section id="certifications">
     <div class="box">
-	<h2>Certifications</h2>
-      <div class="certs-grid">
-
+	<h2>Certifications (<span id="certCount">15</span>)</h2>
+            <div class="certs-grid">	
 		  <div class="cert-card">
+          <a href="Certifications/Certificate of Completion - Programming (Java) NC III (TESDA Course Scholarship Training) (Pending).pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
+            <embed src="Certifications/Certificate of Completion - Programming (Java) NC III (TESDA Course Scholarship Training) (Pending).pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/TESDA BSRS PROFILE - Java Completed.png" alt="Certificate of Completion - Programming (Java) NC III (TESDA Course Scholarship Training) (Pending)" class="cert-preview-mobile-img">
+          </a>
+          <div class="cert-name">Certificate of Completion - Programming (Java) NC III (TESDA Course Scholarship Training) (Pending)</div>
+          <div class="cert-provider-group">Provided by: <a href="https://www.tesda.gov.ph/" target="_blank" rel="noopener noreferrer">TESDA</a>, <a href="https://www.facebook.com/sltcfipasig" target="_blank" rel="noopener noreferrer">Southern Luzon Technological College Foundation Incorporated - Pasig City (SLPC)</a></div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-preview cert-preview-placeholder">
+            <span>📄</span>
+            <span>Certificate Coming Soon</span>
+          </div>
+          <div class="cert-name">Certificate of Completion - Spring Valley (TESDA Scholarship SIL Training) (Pending)</div>
+          <a href="https://www.facebook.com/springvalleytech/" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: Spring Valley</a>
+        </div>
+
+        <div class="cert-card">
+          <a href="Certifications/AWS Cloud Computing Certification.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
+            <embed src="Certifications/AWS Cloud Computing Certification.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/Certificate of Course Completion - AWS Cloud Quest Cloud Practitioner.png" alt="Certificate of Course Completion - AWS Cloud Quest: Cloud Practitioner" class="cert-preview-mobile-img">
+          </a>
+          <div class="cert-name">Certificate of Course Completion - AWS Cloud Quest: Cloud Practitioner</div>
+          <a href="https://skillbuilder.aws/" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: AWS Skill Builder</a>
+          <a href="https://www.credly.com/badges/50fc3502-74c4-4fbd-8d01-674c361bbe2e/" target="_blank" rel="noopener noreferrer" class="cert-credential">Show Credential</a>
+        </div>
+
+        <div class="cert-card">
+          <a href="Certifications/Web Development Fundamentals Certificate (IBM).pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
+            <embed src="Certifications/Web Development Fundamentals Certificate (IBM).pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+            <img src="Certifications/Certification Images/Web Development Fundamentals Certificate (IBM).png" alt="Certificate of Course Completion - Web Development Fundamentals" class="cert-preview-mobile-img">
+          </a>
+          <div class="cert-name">Certificate of Course Completion - Web Development Fundamentals</div>
+          <a href="https://skillsbuild.org/" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: IBM SkillsBuild</a>
+          <a href="https://www.credly.com/badges/40f3287f-ac21-40ec-a344-c428af53cf01" target="_blank" rel="noopener noreferrer" class="cert-credential">Show Credential</a>
+        </div>
+	      <div class="cert-card">
           <a href="Certifications/Certificate of Recognition in Academic Excellence - ITMAWE401.pdf" target="_blank" rel="noopener noreferrer" class="cert-preview">
             <embed src="Certifications/Certificate of Recognition in Academic Excellence - ITMAWE401.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
             <img src="Certifications/Certification Images/Certificate of Recognition in Academic Excellence - ITMAWE401 With HONORS.jpg" alt="Certificate of Recognition in Academic Excellence - ITMAWE401 With HONORS" class="cert-preview-mobile-img">
@@ -1350,7 +1427,7 @@
             <embed src="Certifications/Java Fundamentals Certificate.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
             <img src="Certifications/Certification Images/Java Fundamentals Certificate.jpg" alt="Java Fundamentals Certificate" class="cert-preview-mobile-img">
           </a>
-          <div class="cert-name">Award of Course Completion - Java Fundamentals</div>
+          <div class="cert-name">Java Fundamentals Certificate</div>
           <a href="https://academy.oracle.com/en/oa-web-overview.html" target="_blank" rel="noopener noreferrer" class="cert-provider">Provided by: Oracle Academy</a>
         </div>
 
@@ -1633,6 +1710,8 @@
         cfSubmitBtn.textContent = 'Send Message';
       }
     });
+	    // ---- Certifications: show how many certificates are listed ----
+    document.getElementById('certCount').textContent = document.querySelectorAll('.cert-card').length;
   </script>
 
 </body>
